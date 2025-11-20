@@ -1,0 +1,87 @@
+---
+import { XMLParser } from 'fast-xml-parser';
+
+const channelId = 'UCp8CdmF022qA-baP6fFlYdw';
+const rssUrl = `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`;
+
+const response = await fetch(rssUrl);
+const xml = await response.text();
+
+const parser = new XMLParser({ ignoreAttributes: false });
+const data = parser.parse(xml);
+
+const videos = data.feed.entry?.slice(0, 3).map((video: any) => ({
+  title: video.title,
+  link: video.link['@_href'],
+  thumbnail: `https://i.ytimg.com/vi/${video['yt:videoId']}/hqdefault.jpg`,
+  published: video.published
+})) || [];
+---
+
+<section class="latest-videos">
+  <h2 class="section-title">Por si no lo viste</h2>
+
+  <div class="videos-grid">
+    {videos.map((video: any) => (
+      <a href={video.link} target="_blank" rel="noopener" class="video-card">
+        <div class="thumbnail">
+          <img 
+            src={video.thumbnail} 
+            alt={video.title}
+            loading="lazy"
+          />
+        </div>
+        <p class="video-title">{video.title}</p>
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .latest-videos {
+    width: 100%;
+    max-width: 1400px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+  }
+
+  /* Grid flexible con wrap automático */
+  .videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    padding: 0 0 2rem 0;
+  }
+
+  /* Tarjeta de vídeo */
+  .video-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 380px;
+    text-decoration: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px var(--bg-color-dark);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .video-card p{
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  
+
+</style>

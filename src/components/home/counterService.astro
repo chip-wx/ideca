@@ -1,0 +1,227 @@
+<section class="container">
+    <div class="cardCounter">
+        <h3 class="titleCard">Nuestro próximo servicio comienza en:</h3>
+        <span class="countdown">00:00:00</span>
+        <h3 class="titleService">Miércoles de Intimidad / Servicio Dominical</h3>
+    </div>
+
+    <div class="cardSocial">
+        <h3 class="titleCard">Puedes sintonizarnos por medio de: </h3>
+        <div class="social">
+            <a href="https://www.facebook.com/ideca" target="_blank" class="fb">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="50px" height="50px"><path fill="#039be5" d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"/><path fill="#fff" d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"/></svg>
+            </a>
+            <a href="https://www.youtube.com/@idecatlantida" target="_blank" class="yt">
+                <svg width="50px" height="50px" viewBox="0 -7 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    
+             <title>Youtube-color</title>
+             <desc>Created with Sketch.</desc>
+             <defs>
+
+            </defs>
+             <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                 <g id="Color-" transform="translate(-200.000000, -368.000000)" fill="#CE1312">
+                     <path d="M219.044,391.269916 L219.0425,377.687742 L232.0115,384.502244 L219.044,391.269916 Z M247.52,375.334163 C247.52,375.334163 247.0505,372.003199 245.612,370.536366 C243.7865,368.610299 241.7405,368.601235 240.803,368.489448 C234.086,368 224.0105,368 224.0105,368 L223.9895,368 C223.9895,368 213.914,368 207.197,368.489448 C206.258,368.601235 204.2135,368.610299 202.3865,370.536366 C200.948,372.003199 200.48,375.334163 200.48,375.334163 C200.48,375.334163 200,379.246723 200,383.157773 L200,386.82561 C200,390.73817 200.48,394.64922 200.48,394.64922 C200.48,394.64922 200.948,397.980184 202.3865,399.447016 C204.2135,401.373084 206.612,401.312658 207.68,401.513574 C211.52,401.885191 224,402 224,402 C224,402 234.086,401.984894 240.803,401.495446 C241.7405,401.382148 243.7865,401.373084 245.612,399.447016 C247.0505,397.980184 247.52,394.64922 247.52,394.64922 C247.52,394.64922 248,390.73817 248,386.82561 L248,383.157773 C248,379.246723 247.52,375.334163 247.52,375.334163 L247.52,375.334163 Z" id="Youtube">
+
+</path>
+                 </g>
+    </g>
+</svg>
+            </a>
+        </div>
+        <span class="titleSocial">¡Te esperamos!</span>
+    </div>
+</section>
+
+
+<style>
+    .container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .cardCounter{
+        padding: 1rem .7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .3rem;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+    }
+    .cardSocial{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: .3rem;
+        background-color: var(--bg-color-dark);
+        color: var(--bg-color-light);
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+        padding: 1rem .7rem;
+        border-radius: 10px;
+    }
+
+    .countdown{
+        font-size: 2rem;
+        font-weight: bold;
+        color: var(--primary-color);
+    }
+
+    .titleService{
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+    }
+
+
+    .titleSocial{
+        color: var(--primary-color);
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    @keyframes slideIn{
+        from{
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0);
+        }
+    }
+
+    @media (min-width: 576px) {
+        .container{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .cardCounter{
+            padding: 3rem 2rem;
+            width: 60%;
+        }
+        .cardCounter .titleCard{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .cardSocial .titleCard{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .cardCounter .titleService{
+            font-size: 1.5rem;
+        }
+        .cardSocial{
+            padding: 1.5rem 2rem;
+            width: 40%;
+        }
+        .cardSocial .social{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .3rem;
+        }
+        .cardSocial .titleSocial{
+            font-size: 1.5rem;
+        }
+    }
+</style>
+
+<script lang="ts">
+    function startCountdown() {
+        const span = document.querySelector(".countdown");
+        const title = document.querySelector(".titleService");
+
+        function getNextService(now) {
+            const day = now.getDay();
+            const year = now.getFullYear();
+            const month = now.getMonth();
+            const date = now.getDate();
+
+            // Horas del día actual
+            const wed_715 = new Date(year, month, date, 19, 15, 0);
+            const wed_830 = new Date(year, month, date, 20, 30, 0);
+
+            const sun_830 = new Date(year, month, date, 8, 30, 0);
+            const sun_1000 = new Date(year, month, date, 10, 0, 0);
+
+            const sun_1100 = new Date(year, month, date, 11, 0, 0);
+            const sun_1230 = new Date(year, month, date, 12, 30, 0);
+
+            // Función para obtener el día de la semana próximo
+            function nextWeek(dateObj, targetDay) {
+                const result = new Date(dateObj);
+                result.setDate(result.getDate() + ((targetDay - day + 7) % 7));
+                return result;
+            }
+
+            // Crear fechas completas para próximos servicios
+            const nextWed_715 = nextWeek(now, 3); nextWed_715.setHours(19, 15, 0, 0);
+            const nextSun_830 = nextWeek(now, 0); nextSun_830.setHours(8, 30, 0, 0);
+            const nextSun_1100 = nextWeek(now, 0); nextSun_1100.setHours(11, 0, 0, 0);
+
+            // *** DETECTAR MOMENTOS EN VIVO ***
+            if (day === 3 && now >= wed_715 && now <= wed_830) {
+                return { mode: "live", service: "Miércoles de Intimidad" };
+            }
+            if (day === 0 && now >= sun_830 && now <= sun_1000) {
+                return { mode: "live", service: "Servicio Dominical" };
+            }
+            if (day === 0 && now >= sun_1100 && now <= sun_1230) {
+                return { mode: "live", service: "Servicio Dominical" };
+            }
+
+            // *** PRÓXIMO SERVICIO (CUENTA REGRESIVA) ***
+            const upcoming = [
+                { date: nextWed_715, service: "Miércoles de Intimidad" },
+                { date: nextSun_830, service: "Servicio Dominical" },
+                { date: nextSun_1100, service: "Servicio Dominical" }
+            ].filter(s => s.date > now);
+
+            upcoming.sort((a, b) => a.date - b.date);
+
+            return {
+                mode: "countdown",
+                target: upcoming[0].date,
+                service: upcoming[0].service
+            };
+        }
+
+        function update() {
+            const now = new Date();
+            const result = getNextService(now);
+
+            // --- EN VIVO ---
+            if (result.mode === "live") {
+                span.textContent = "Estamos en vivo";
+                title.textContent = result.service;
+                return;
+            }
+
+            // --- COUNTDOWN ---
+            const diff = result.target - now;
+
+            const hours = Math.floor(diff / 1000 / 60 / 60);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            span.textContent =
+                `${hours.toString().padStart(2, "0")}:` +
+                `${minutes.toString().padStart(2, "0")}:` +
+                `${seconds.toString().padStart(2, "0")}`;
+
+            title.textContent = result.service;
+        }
+
+        update();
+        setInterval(update, 1000);
+    }
+
+    if (typeof window !== "undefined") {
+        startCountdown();
+    }
+</script>

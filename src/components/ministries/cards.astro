@@ -1,0 +1,60 @@
+---
+const ministerios = ["misiones.png", "diaconos.png", "matrimonios.png", "cabellosdePlata.png", "hombres.png", "mujeres.png", "tardeRosa.png", "pro.jpg", "alabanza.png"]
+---
+
+<div class="container">
+    <p class="info">Puedes unirte a un ministerio abocandote a secretario en el templo de IDECA</p>
+    <div class="cards">
+        {ministerios.map((ministerio) => {
+            return (
+                <div class="card">
+                    <img src={`/ideca/imgs/ministerios/${ministerio}`} alt="" />
+                </div>
+                )
+            })
+        }
+    </div>
+</div>
+
+<style>
+    .container{
+        width: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .info{
+        padding: 1.4rem 2rem;
+        text-align: center;
+        font-size: clamp(1rem, 2vw, 1.5rem);
+    }
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+    .card{
+        width: 20rem;
+        height: 20rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 .5rem 4px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+    }
+    .card img{
+        width: auto;
+        height: auto;
+    }
+
+    @media (min-width: 1024px) {
+        .card:hover{
+            background-color: #f55;
+        }
+    }
+</style>

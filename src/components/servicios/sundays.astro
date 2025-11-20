@@ -1,0 +1,50 @@
+<div class="container">
+    <h2 class="title">Servicio Dominical</h2>
+    <p class="description">Cada domingo nos reunimos para conectar con Dios y con nuestra comunidad. Contamos con dos servicios, para que puedas elegir el horario que mejor se adapte a ti:</p>
+    <ul class="serviciosList">
+        <li><span class="service">Servicio de la mañana:</span> disponible solo de manera presencial, ideal para empezar el día con energía y enfoque espiritual.</li>
+        <li><span class="service">Servicio de la tarde:</span> puedes acompañarnos presencialmente o verlo en línea a través de <span class="yt">YouTube</span> o <span class="fb">Facebook</span>, en vivo desde donde estés</li>
+    </ul>
+    <p class="description">Estés donde estés en tu camino de fe, aquí eres bienvenido. ¡Nos encantaría que te unas a nosotros este domingo!</p>
+</div>
+
+<style>
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        padding: 2rem 2rem;
+        gap: 1rem;
+    }
+    .title{
+        width: 100%;
+        text-align: center;
+        color: var(--primary-color);
+        font-size: 2rem;
+    }
+    .description{
+        width: 100%;
+        font-size: 1.1rem;
+    }
+    .service {
+        color: var(--secondary-color);
+    }
+    .serviciosList {
+        font-size: 1.1rem;
+    }
+
+    .yt{
+        color: var(--primary-color);
+    }
+    .fb{
+        color: #039BE5;
+    }
+
+    @media (min-width: 1024px) {
+        .container{
+            padding: 2rem 6rem;
+        }
+    }
+</style>

@@ -1,0 +1,18 @@
+---
+import Layout from "../layout/layout.astro";
+import Cards from "../components/ministries/cards.astro";
+---
+<Layout title="IDECA - Ministerios">
+    <h1 id="title">Ministerios</h1>
+    <Cards />
+</Layout>
+
+<style>
+    #title{
+        padding-top: 4rem;
+        font-size: clamp(3rem, 5vw, 4rem);
+        color: var(--secondary-color);
+        font-weight: 500;
+        text-align: center;
+    }
+</style>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Mada:wght@200..900&display=swap');
+
+:root{
+    --primary-color: #BE0404;
+    --secondary-color: #CD8F09;
+    --bg-color-light: #F5F5F5;
+    --bg-color-dark: #282828;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Lato', sans-serif;
+}
+
+div, span, p, a, button, section, header, footer, nav, ul, li{
+    font-family: 'Mada', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color-light);
+}
+
+img, svg, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+main, section, header, footer {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
